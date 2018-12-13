@@ -1,5 +1,11 @@
 version: "3"
 services:
+  nginx:
+    build: ./
+    ports:
+    - "8090:80"
+    volumes:
+    - $PWD:/etc/promtail
   loki:
     image: grafana/loki:master
     ports:
@@ -19,4 +25,4 @@ services:
     ports:
       - "3000:3000"
     environment:
-      GF_EXPLORE_ENABLED: "true"
+    - "GF_EXPLORE_ENABLED=true"
