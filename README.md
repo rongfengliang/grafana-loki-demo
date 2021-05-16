@@ -1,5 +1,7 @@
 # grafana loki demo
 
+> just for test 
+
 ## how to run
 
 * start
